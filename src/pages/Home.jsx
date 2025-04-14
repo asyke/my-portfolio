@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom' // ✅ ADD THIS LINE
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import avatar from '../assets/avatar.jpg'
 import './Home.scss'
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Home | Asylbek'
+  }, [])
+
   return (
     <div className="page home-page">
       <div className="home-content">

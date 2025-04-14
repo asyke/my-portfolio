@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 
@@ -6,6 +6,10 @@ function Contact() {
   const form = useRef();
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    document.title = 'Contact | Asylbek'
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -38,35 +42,19 @@ function Contact() {
         <p>I’d love to hear from you! Send a quick message below.</p>
 
         <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-          />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-          />
+          <input type="text" name="user_name" placeholder="Your Name" required />
+          <input type="email" name="user_email" placeholder="Your Email" required />
           <input type="text" name="subject" placeholder="Subject" />
           <textarea name="message" placeholder="Your Message" required />
-          <button type="submit" className="contact-btn">
-            Send
-          </button>
+          <button type="submit" className="contact-btn">Send</button>
         </form>
 
         {successMessage && <p className="success-msg">{successMessage}</p>}
         {errorMessage && <p className="error-msg">{errorMessage}</p>}
 
         <div className="contact-info">
-          <p>
-            <strong>Email:</strong> asylbek.ibrahimov@gmail.com
-          </p>
-          <p>
-            <strong>Phone:</strong> (224) 341-8830
-          </p>
+          <p><strong>Email:</strong> asylbek.ibrahimov@gmail.com</p>
+          <p><strong>Phone:</strong> (224) 341-8830</p>
           <p>
             <strong>LinkedIn:</strong>{" "}
             <a
