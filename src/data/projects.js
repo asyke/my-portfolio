@@ -1,4 +1,5 @@
 import reactMealsImg from '../assets/projects/reactmeals.png';
+import todoListImg from '../assets/projects/todolist-react-asylbek.png';
 
 export const projects = [
     {
@@ -18,5 +19,13 @@ export const projects = [
         github: 'https://github.com/asyke/food-app-redo',
         image: reactMealsImg,
       },
+      {
+        title: 'Todolist React App',
+        description: 'A task management UI with team member avatars and real-time task list updates built using React.',
+        tech: ['React', 'CSS Modules'],
+        live: 'https://todolist-react-asylbek.netlify.app/',
+        github: 'https://github.com/asyke/react-task-app', // 🔁 update if actual link differs
+        image: todoListImg,
+      }
   ]
   
