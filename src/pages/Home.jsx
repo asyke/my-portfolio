@@ -1,5 +1,6 @@
-import avatar from '../assets/avatar.jpg' // adjust path if needed
-import './Home.scss' // or .css if you’re using css
+import { Link } from 'react-router-dom' // ✅ ADD THIS LINE
+import avatar from '../assets/avatar.jpg'
+import './Home.scss'
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
         <div className="text-zone">
           <h1>Hi, I'm Asylbek</h1>
           <p>Full Stack Software Engineer</p>
-          <button className="contact-btn">Contact Me</button>
+          <Link to="/contact" className="contact-btn">Contact Me</Link>
         </div>
         <div className="avatar-zone">
           <img src={avatar} alt="Asylbek Ibrakhimov" className="avatar" />

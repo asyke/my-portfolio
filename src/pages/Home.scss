@@ -40,6 +40,8 @@
         cursor: pointer;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
         transition: background-color 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
 
         &:hover {
           background-color: #60a5fa;
@@ -77,6 +79,8 @@
       .contact-btn {
         background-color: #3b82f6;
         color: white;
+        display: inline-block;
+        text-decoration: none;
 
         &:hover {
           background-color: #2563eb;
