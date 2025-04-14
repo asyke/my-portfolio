@@ -38,21 +38,42 @@ function Contact() {
         <p>I’d love to hear from you! Send a quick message below.</p>
 
         <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <input type="text" name="user_name" placeholder="Your Name" required />
-          <input type="email" name="user_email" placeholder="Your Email" required />
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+          />
+          <input type="text" name="subject" placeholder="Subject" />
           <textarea name="message" placeholder="Your Message" required />
-          <button type="submit" className="contact-btn">Send</button>
+          <button type="submit" className="contact-btn">
+            Send
+          </button>
         </form>
 
         {successMessage && <p className="success-msg">{successMessage}</p>}
         {errorMessage && <p className="error-msg">{errorMessage}</p>}
 
         <div className="contact-info">
-          <p><strong>Email:</strong> asylbek.ibrahimov@gmail.com</p>
-          <p><strong>Phone:</strong> (224) 341-8830</p>
+          <p>
+            <strong>Email:</strong> asylbek.ibrahimov@gmail.com
+          </p>
+          <p>
+            <strong>Phone:</strong> (224) 341-8830
+          </p>
           <p>
             <strong>LinkedIn:</strong>{" "}
-            <a href="https://linkedin.com/in/asylbek-ibrakhimov" target="_blank" rel="noreferrer">
+            <a
+              href="https://linkedin.com/in/asylbek-ibrakhimov"
+              target="_blank"
+              rel="noreferrer"
+            >
               linkedin.com/in/asylbek-ibrakhimov
             </a>
           </p>
