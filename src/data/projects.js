@@ -7,7 +7,7 @@ export const projects = [
       description: 'A full-stack educational quiz app with email auth, real environments & GitLab CI/CD.',
       tech: ['React', 'Node.js', 'MongoDB', 'Tailwind', 'SendGrid'],
       live: 'https://math-ort.netlify.app/',
-      github: 'https://github.com/asyke/math-ort',
+      gitlab: 'https://gitlab.com/math-ort/ort',
       image: '/images/math-ort-preview.png',
     },
     {
