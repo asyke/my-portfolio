@@ -20,6 +20,11 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>
+            Projects
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
             Contact
           </NavLink>
