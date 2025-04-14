@@ -1,7 +1,7 @@
-import './Projects.scss'
-import { projects } from '../data/projects'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import "./Projects.scss";
+import { projects } from "../data/projects";
+import { FaExternalLinkAlt, FaGithub, FaGitlab } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Projects() {
   return (
@@ -20,22 +20,25 @@ function Projects() {
             <p>{project.description}</p>
             <div className="tech-stack">
               {project.tech.map((tech, i) => (
-                <span key={i} className="badge">{tech}</span>
+                <span key={i} className="badge">
+                  {tech}
+                </span>
               ))}
             </div>
             <div className="project-links">
               <a href={project.live} target="_blank" rel="noreferrer">
                 Live <FaExternalLinkAlt />
               </a>
-              <a href={project.github} target="_blank" rel="noreferrer">
-                GitHub <FaGithub />
+              <a href={project.repo} target="_blank" rel="noreferrer">
+                {project.repoType === "gitlab" ? "GitLab" : "GitHub"}{" "}
+                {project.repoType === "gitlab" ? <FaGitlab /> : <FaGithub />}
               </a>
             </div>
           </motion.div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
