@@ -1,0 +1,53 @@
+.page.about-page {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  
+    .about-card {
+      background-color: #ffffff;
+      padding: 3rem;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      text-align: center;
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #111827;
+      }
+  
+      p {
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+        color: #4b5563;
+        margin-bottom: 1.25rem;
+  
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    // 🌙 Dark theme overrides
+    body.dark & {
+      background-color: #0f172a;
+  
+      .about-card {
+        background-color: #1e293b;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  
+        h1 {
+          color: #f1f5f9;
+        }
+  
+        p {
+          color: #cbd5e1;
+        }
+      }
+    }
+  }
+  

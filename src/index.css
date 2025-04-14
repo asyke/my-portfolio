@@ -1,0 +1,185 @@
+:root {
+  --light-bg: #f9fafb;
+  --light-text: #111827;
+  --dark-bg: #0f172a;
+  --dark-text: #f1f5f9;
+
+  --primary-accent: #a5d7e8;
+  --link-color: #646cff;
+  --link-hover: #535bf2;
+
+  --nav-bg: #ffffff;
+  --nav-link: #1e293b;
+  --bg-main: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =============================
+   Theme Modes
+============================= */
+
+body.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+
+  --nav-bg: #0f172a;
+  --nav-link: #e2e8f0;
+  --bg-main: #1e293b;
+  --card-bg: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+}
+
+/* =============================
+   Typography
+============================= */
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: inherit;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+/* =============================
+   Theme Toggle
+============================= */
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* =============================
+   Buttons
+============================= */
+
+button,
+.cta-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--primary-accent);
+  color: #002b5b;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================
+   Layout Helpers
+============================= */
+
+.app {
+  padding: 1rem;
+  text-align: center;
+}
+
+.page {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bg-main);
+}
+
+/* =============================
+   Home Layout
+============================= */
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home-content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+
+.avatar-zone {
+  margin-top: 2rem;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-accent);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* =============================
+   Responsive Typography
+============================= */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}

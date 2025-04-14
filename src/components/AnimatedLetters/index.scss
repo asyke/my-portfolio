@@ -1,0 +1,38 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: bounceIn 0.5s forwards;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  // Sequential animation
+  @for $i from 1 through 60 {
+    .text-animate._#{$i} {
+      animation-delay: #{0.05 * $i}s;
+    }
+  }
+  
+  // Hover state
+  .text-animate-hover {
+    display: inline-block;
+    transition: 0.3s ease;
+    &:hover {
+      color: #a5d7e8;
+      transform: scale(1.2);
+    }
+  }
+  
