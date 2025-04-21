@@ -1,5 +1,7 @@
 import reactMealsImg from '../assets/projects/reactmeals.png';
 import todoListImg from '../assets/projects/todolist-react-asylbek.png';
+import math_ort from '../assets/projects/math-ort-preview.png'
+import comfortStoreImg from '../assets/projects/comfort-store-demo.png'
 
 export const projects = [
     {
@@ -9,7 +11,7 @@ export const projects = [
       live: 'https://math-ort.netlify.app/',
       repo: 'https://gitlab.com/math-ort/ort',
       repoType: 'gitlab',
-      image: '/images/math-ort-preview.png',
+      image: math_ort,
     },
     {
       title: 'ReactMeals – Food Ordering App',
@@ -28,6 +30,15 @@ export const projects = [
       repo: 'https://github.com/asyke/react-task-app',
       repoType: 'github',
       image: todoListImg,
+    },
+    {
+      title: 'Comfort Store – E-commerce App',
+      description: 'An e-commerce demo built with React and Context API for shopping cart, routing, and protected checkout.',
+      tech: ['React', 'Context API', 'Auth', 'CSS'],
+      live: 'https://comfort-store-demo.netlify.app/',
+      repo: 'https://github.com/asyke/store-comfort.git',
+      repoType: 'github',
+      image: comfortStoreImg,
     }
   ]
   
