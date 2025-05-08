@@ -30,7 +30,11 @@ const Nav = () => {
           </NavLink>
         </li>
       </ul>
+
       <div className="theme-toggle-container">
+        <span className="theme-emoji" aria-label="Theme Icon">
+          {theme === 'dark' ? '🌙' : '☀️'}
+        </span>
         <label className="switch">
           <input
             type="checkbox"

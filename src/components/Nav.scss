@@ -41,6 +41,12 @@
   .theme-toggle-container {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .theme-emoji {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
   }
   
   /* Toggle Switch */

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import './About.scss'
+import "./About.scss";
 
 function About() {
   useEffect(() => {
-    document.title = 'About | Asylbek'
+    document.title = "About | Asylbek";
   }, []);
 
   return (
@@ -11,10 +11,15 @@ function About() {
       <div className="about-card">
         <h1>About Me</h1>
         <p>
-          I'm Asylbek Ibrakhimov, a Full Stack Software Engineer based in Chicago, IL.
+          I’m Asylbek Ibrakhimov, a Full Stack Software Engineer specializing in
+          modern web development, based in Chicago, IL.
         </p>
         <p>
-          I specialize in React, Angular, and Node.js and love building user-friendly, scalable applications.
+          I focus on frontend development using Angular and React, and also
+          build backend services with Node.js, Golang, and MongoDB. I manage
+          DevOps workflows including Google Cloud infrastructure and GitLab
+          CI/CD pipelines. I enjoy writing clean, maintainable code and am
+          always eager to learn and grow.
         </p>
       </div>
     </div>

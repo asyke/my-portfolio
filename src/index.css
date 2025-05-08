@@ -14,6 +14,8 @@
   --card-bg: #ffffff;
   --text-primary: #111827;
   --text-secondary: #6b7280;
+  --footer-bg: #f9fafb;
+  --footer-text: #1f2937;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -43,6 +45,8 @@ body.dark {
   --card-bg: #1e293b;
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
+  --footer-bg: #111827;
+  --footer-text: #e5e7eb;
 }
 
 /* =============================
