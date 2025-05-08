@@ -9,18 +9,21 @@ function Home() {
   }, [])
 
   return (
-    <div className="page home-page">
-      <div className="home-content">
-        <div className="text-zone">
-          <h1>Hi, I'm Asylbek</h1>
-          <p>Full Stack Software Engineer</p>
-          <Link to="/contact" className="contact-btn">Contact Me</Link>
-        </div>
-        <div className="avatar-zone">
-          <img src={avatar} alt="Asylbek Ibrakhimov" className="avatar" />
-        </div>
-      </div>
+<div className="page home-page">
+  <div className="home-content">
+    <div className="text-zone">
+      <h1 className="fade-in-up delay-1">Hi, I'm Asylbek</h1>
+      <p className="fade-in-up delay-2">Full Stack Software Engineer</p>
+      <Link to="/contact" className="contact-btn fade-in-up delay-3">
+        Contact Me
+      </Link>
     </div>
+    <div className="avatar-zone fade-in-up delay-3">
+      <img src={avatar} alt="Asylbek Ibrakhimov" className="avatar" />
+    </div>
+  </div>
+</div>
+
   )
 }
 
