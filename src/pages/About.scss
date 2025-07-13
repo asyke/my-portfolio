@@ -1,79 +1,142 @@
 .page.about-page {
-    background-color: #f9fafb;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .about-card {
+    background-color: #ffffff;
+    padding: 3rem;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #111827;
+    }
+
+    p {
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    color: #4b5563;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .tech-stack {
+      margin-top: 2rem;
+
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #1e3a8a;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+
+        li a {
+          background-color: #e0f2fe;
+          color: #0369a1;
+          padding: 0.5rem 1rem;
+          border-radius: 9999px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          display: inline-block;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+          &:hover {
+            background-color: #bae6fd;
+            color: #0c4a6e;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+
+  // 🌙 Dark Mode Overrides
+  body.dark & {
+    background-color: #0f172a;
+
     .about-card {
-      background-color: #ffffff;
-      padding: 3rem;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      text-align: center;
-  
+      background-color: #1e293b;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+
       h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #111827;
+        color: #f1f5f9;
       }
-  
+
       p {
-        font-size: 1.125rem;
-        line-height: 1.8rem;
-        color: #4b5563;
-        margin-bottom: 1.25rem;
-  
-        &:last-of-type {
-          margin-bottom: 0;
-        }
+        color: #cbd5e1;
+        text-align: justify;
       }
-    }
-  
-    // 🌙 Dark theme overrides
-    body.dark & {
-      background-color: #0f172a;
-  
-      .about-card {
-        background-color: #1e293b;
-        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-  
-        h1 {
-          color: #f1f5f9;
+
+      .tech-stack {
+        h2 {
+          color: #93c5fd;
         }
-  
-        p {
-          color: #cbd5e1;
+
+        li a {
+          background-color: #1e40af;
+          color: #e0f2fe;
+
+          &:hover {
+            background-color: #1e3a8a;
+            color: #ffffff;
+          }
         }
       }
     }
   }
-  
-  @keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-in {
+}
+
+// Animation
+@keyframes fadeSlideUp {
+  0% {
     opacity: 0;
-    animation: fadeSlideUp 0.8s ease-out forwards;
+    transform: translateY(20px);
   }
-  
-  .delay-1 {
-    animation-delay: 0.2s;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .delay-2 {
-    animation-delay: 0.4s;
-  }
-  .delay-3 {
-    animation-delay: 0.6s;
-  }
-  
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.delay-4 {
+  animation-delay: 0.8s;
+}
+.delay-5 {
+  animation-delay: 1s;
+}
